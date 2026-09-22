@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="out"></p>
+
+<script>
+       let arr=[];
+    let x = new XMLHttpRequest();
+    x.open("GET","book.xml", false)
+    x.send();
+
+    let xml=x.responseXML;
+ 
+    let book= xml.getElementsByTagName("book");
+    for(let i=0; i<book.length; i++){
+        let title = book[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        arr[i]= title ;
+    }
+  for(let i=0; i<arr.length; i++){
+
+        document.getElementById("out").innerHTML=arr;
+        
+    }
+
+</script>
+
+</body>
+</html>
