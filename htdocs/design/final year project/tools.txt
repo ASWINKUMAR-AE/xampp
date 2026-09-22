@@ -1,0 +1,17 @@
+Old DVD writer (2x)
+Arduino Nano.
+L293D Motor Driver IC (2x)
+IC Base (2x)
+Micro Servo Motor.
+PCB Board
+Male And Female Header Pin.
+Barrel Socket.
+Acrylic Sheet 3mm
+Tools List:
+
+Solder iron.
+Super Glue.
+Mini Handsaw.
+Sandpaper.
+Ruler.
+Marker Pen.
