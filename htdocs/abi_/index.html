@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle GPS Tracking - Login</title>
+    <!-- Bootstrap Dark Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #121416;
+            color: #f8f9fa;
+        }
+        .login-card {
+            background-color: #1e2125;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .form-control {
+            background-color: #2c3034;
+            border: 1px solid #444;
+            color: #f8f9fa;
+        }
+        .form-control:focus {
+            background-color: #2c3034;
+            color: #f8f9fa;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .status-active {
+            background-color: #28a745;
+        }
+        .status-inactive {
+            background-color: #dc3545;
+        }
+        .sidebar {
+            background-color: #1e2125;
+            height: 100vh;
+            position: fixed;
+        }
+        .sidebar .nav-link {
+            color: #adb5bd;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #2c3034;
+            color: #fff;
+        }
+        .sidebar .nav-link.active {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+        .sidebar .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .card-dark {
+            background-color: #1e2125;
+            border: 1px solid #2c3034;
+        }
+        .map-container {
+            height: 400px;
+            background-color: #2c3034;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .vehicle-card {
+            transition: transform 0.2s;
+        }
+        .vehicle-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Dashboard Layout (shown after login) -->
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar d-none d-md-block p-3" style="width: 250px;">
+            <div class="logo-container mb-4">
+                <img src="https://via.placeholder.com/120x40?text=GPS+Tracker" alt="Logo" class="logo">
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-car"></i> Vehicles
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-map-marked-alt"></i> Live Tracking
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-route"></i> Routes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-history"></i> History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-bell"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                </li>
+                <li class="nav-item mt-3">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content flex-grow-1">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Dashboard</h2>
+                <div class="d-flex align-items-center">
+                    <span class="me-3">Welcome, Admin</span>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle me-1"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="row mb-4">
+                <div class="col-md-3 mb-3">
+                    <div class="card card-dark h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Total Vehicles</h6>
+                                    <h3 class="mb-0">24</h3>
+                                </div>
+                                <div class="bg-primary bg-opacity-10 p-3 rounded">
+                                    <i class="fas fa-car text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card card-dark h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Active Now</h6>
+                                    <h3 class="mb-0">18</h3>
+                                </div>
+                                <div class="bg-success bg-opacity-10 p-3 rounded">
+                                    <i class="fas fa-check-circle text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card card-dark h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Alerts Today</h6>
+                                    <h3 class="mb-0">5</h3>
+                                </div>
+                                <div class="bg-warning bg-opacity-10 p-3 rounded">
+                                    <i class="fas fa-exclamation-triangle text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card card-dark h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="text-muted mb-2">Avg Speed</h6>
+                                    <h3 class="mb-0">62 <small class="text-muted">km/h</small></h3>
+                                </div>
+                                <div class="bg-info bg-opacity-10 p-3 rounded">
+                                    <i class="fas fa-tachometer-alt text-info"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map and Vehicle List -->
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="card card-dark h-100">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Live Vehicle Tracking</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="map-container">
+                                <!-- Map would be rendered here -->
+                                <div class="d-flex justify-content-center align-items-center h-100">
+                                    <div class="text-center">
+                                        <i class="fas fa-map-marked-alt fa-4x text-muted mb-3"></i>
+                                        <p class="text-muted">Live vehicle positions will appear here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card card-dark h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Recent Alerts</h5>
+                            <span class="badge bg-danger">5 New</span>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action bg-transparent text-white border-secondary">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Over Speed</h6>
+                                        <small>15 min ago</small>
+                                    </div>
+                                    <p class="mb-1">Vehicle #VH-2456 exceeded speed limit</p>
+                                    <small>Location: Main Highway</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action bg-transparent text-white border-secondary">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Geo-fence Exit</h6>
+                                        <small>42 min ago</small>
+                                    </div>
+                                    <p class="mb-1">Vehicle #VH-1893 left designated area</p>
+                                    <small>Location: Industrial Zone</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action bg-transparent text-white border-secondary">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Ignition On</h6>
+                                        <small>1 hour ago</small>
+                                    </div>
+                                    <p class="mb-1">Vehicle #VH-3421 ignition turned on</p>
+                                    <small>Location: Parking Lot B</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action bg-transparent text-white border-secondary">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Low Battery</h6>
+                                        <small>2 hours ago</small>
+                                    </div>
+                                    <p class="mb-1">Device battery low on Vehicle #VH-7562</p>
+                                    <small>Battery: 12% remaining</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle List -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-dark">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title mb-0">Vehicle List</h5>
+                            <div>
+                                <button class="btn btn-sm btn-primary me-2"><i class="fas fa-plus me-1"></i> Add Vehicle</button>
+                                <button class="btn btn-sm btn-secondary"><i class="fas fa-filter me-1"></i> Filter</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-dark table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Vehicle ID</th>
+                                            <th>Registration</th>
+                                            <th>Driver</th>
+                                            <th>Status</th>
+                                            <th>Last Location</th>
+                                            <th>Speed</th>
+                                            <th>Last Update</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>VH-2456</td>
+                                            <td>ABC-1234</td>
+                                            <td>John Smith</td>
+                                            <td><span class="status-indicator status-active"></span> Moving</td>
+                                            <td>Main Highway</td>
+                                            <td>68 km/h</td>
+                                            <td>2 min ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-info me-1"><i class="fas fa-map-marker-alt"></i></button>
+                                                <button class="btn btn-sm btn-outline-warning"><i class="fas fa-history"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>VH-1893</td>
+                                            <td>XYZ-5678</td>
+                                            <td>Sarah Johnson</td>
+                                            <td><span class="status-indicator status-active"></span> Idle</td>
+                                            <td>Industrial Zone</td>
+                                            <td>0 km/h</td>
+                                            <td>15 min ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-info me-1"><i class="fas fa-map-marker-alt"></i></button>
+                                                <button class="btn btn-sm btn-outline-warning"><i class="fas fa-history"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>VH-3421</td>
+                                            <td>DEF-9012</td>
+                                            <td>Mike Brown</td>
+                                            <td><span class="status-indicator status-inactive"></span> Offline</td>
+                                            <td>Parking Lot B</td>
+                                            <td>--</td>
+                                            <td>3 hours ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-info me-1"><i class="fas fa-map-marker-alt"></i></button>
+                                                <button class="btn btn-sm btn-outline-warning"><i class="fas fa-history"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>VH-7562</td>
+                                            <td>GHI-3456</td>
+                                            <td>Lisa Wong</td>
+                                            <td><span class="status-indicator status-active"></span> Moving</td>
+                                            <td>City Center</td>
+                                            <td>42 km/h</td>
+                                            <td>5 min ago</td>
+                                            <td>
+                                                <button class="btn btn-sm btn-outline-info me-1"><i class="fas fa-map-marker-alt"></i></button>
+                                                <button class="btn btn-sm btn-outline-warning"><i class="fas fa-history"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form (shown before authentication) -->
+    <div class="container d-none">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-card p-4">
+                    <div class="logo-container mb-4">
+                        <img src="https://via.placeholder.com/150x50?text=GPS+Tracker" alt="Logo" class="logo">
+                        <h4 class="mt-3">Vehicle Tracking System</h4>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password">
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+                        <div class="text-center">
+                            <a href="#" class="text-decoration-none">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center mt-3 text-muted">
+                    <small>© 2023 GPS Tracking System. All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // This would be where you handle the login/logout functionality
+        // For demonstration, we're just toggling between login and dashboard views
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in (in a real app, this would be from session/localStorage)
+            const isLoggedIn = false; // Change to true to see dashboard
+            
+            if (isLoggedIn) {
+                document.querySelector('.container').classList.add('d-none');
+                document.querySelector('.d-flex').classList.remove('d-none');
+            } else {
+                document.querySelector('.container').classList.remove('d-none');
+                document.querySelector('.d-flex').classList.add('d-none');
+            }
+            
+            // Login form submission
+            const loginForm = document.querySelector('form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // In a real app, you would authenticate here
+                    document.querySelector('.container').classList.add('d-none');
+                    document.querySelector('.d-flex').classList.remove('d-none');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
