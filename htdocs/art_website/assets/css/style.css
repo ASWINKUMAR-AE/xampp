@@ -1,0 +1,282 @@
+
+.bg-dark-custom {
+    background-color: #080808;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+
+.jumbotron {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px !important;
+    overflow: hidden;
+}
+
+.card-title, .card-text {
+    color: #e0e0e0;
+}
+
+.footer {
+    background-color: #1e1e1e;
+}
+
+.card:hover {
+    background-color: #333333;
+}
+
+.slide_main {
+    background: rgba(57, 56, 56, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(57, 56, 56, 0.3);
+}
+
+.carousel-item, h3 {
+    color: white !important;
+}
+
+button, .btn {
+    margin: 10px;
+    border-radius: 50px !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+button:focus, .btn:focus, .btn:active, .form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input, textarea, select {
+    border-radius: 50px !important;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.art-logo {
+    width: 100%;
+    max-width: 400px;
+}
+.carousel-indicators > button{
+    border-radius: 50%;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.nav2{
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    border-radius: 50px !important;
+    padding: 0.5rem 1rem;
+    background-image: url(assets/img/bg.jpg);
+    transform-origin: top center;
+}
+
+.navbar-dark.bg-dark-custom {
+    background-color: #222; /* Dark background color */
+}
+
+/* Dynamic Island effect */
+.navbar-toggler-icon {
+    transition: transform 0.3s ease;
+}
+
+.navbar-expand-lg.navbar-animated {
+    animation: island-expand 1s ease-out;
+}
+
+.navbar-collapse.show {
+    animation: island-expand 0.1s ease-out;
+}
+
+@keyframes island-expand {
+    0% {
+        border-radius: 50px;
+        transform: scaleX(0.1);
+      
+    }
+    100% {
+        border-radius: 50px;
+        transform: scaleX(1);
+    }
+}
+
+
+.ani{
+    animation: ani 0.1s ease-out;
+}
+.navbar-toggler {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus, .navbar-toggler:hover {
+    background-color: #333;
+}
+
+/* Change the navbar-toggler-icon when toggled */
+.navbar-collapse.collapsing ~ .navbar-toggler .navbar-toggler-icon {
+    transform: rotate(90deg);
+}
+/* LIKE SYSTEM - Instagram Style */
+.artwork-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border-radius: 50px !important;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.artwork-img-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.artwork-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.artwork-card:hover .artwork-img {
+    filter: brightness(0.9);
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 0;
+    margin: 0;
+}
+
+.like-btn:active {
+    transform: scale(0.8);
+}
+
+.like-btn i.fa-solid {
+    color: #ff3b5c;
+}
+
+/* Like Animation Overlay */
+.like-animation-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 5rem;
+    color: #ff3b5c;
+    pointer-events: none;
+    z-index: 10;
+    animation: heart-pop 0.8s ease-out forwards;
+    opacity: 0;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+@keyframes heart-pop {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
+
+.animate-pulse {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.like-count {
+    font-weight: 600;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Chat System Scaffolding */
+.chat-container {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 80vh;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-sidebar {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0a0a0a;
+}
+
+.chat-messages {
+    overflow-y: auto;
+    background: #141414;
+    padding: 1rem;
+}
+
+.message {
+    max-width: 75%;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 18px;
+    font-size: 0.95rem;
+}
+
+.message.sent {
+    background: #6b46c1;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.message.received {
+    background: #2a2a2a;
+    color: #eee;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+button:focus, .btn:focus, .btn:active, .form-control:focus { outline: none !important; box-shadow: none !important; }
+
+.comments-section { background: #0a0a0a; border-radius: 15px; padding: 15px; margin-top: 5px; font-size: 13px; display: none; border: 1px solid rgba(255, 255, 255, 0.05); }
+.comment-item { margin-bottom: 8px; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 4px; }
+.commenter-name { color: #6b46c1 !important; font-weight: 700; margin-right: 8px; }
+.btn-toggle-comments { cursor: pointer; color: #aaa; font-size: 11px; margin-top: 8px; display: block; border-radius: 50px; padding: 6px 15px; background: rgba(255, 255, 255, 0.05); text-decoration: none; border: none; width: 100%; text-align: left; transition: 0.3s; }
+.btn-toggle-comments:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+.command-form { margin-top: 10px; display: flex; gap: 8px; }
+.command-input { border-radius: 50px !important; background: #1a1a1a !important; border: 1px solid #333 !important; color: #fff !important; flex: 1; padding: 8px 15px; font-size: 13px; outline: none !important; box-shadow: none !important; }
+.btn-send-cmd { background: #6b46c1; color: #fff; border: none; border-radius: 50% !important; width: 35px; height: 35px; min-width: 35px; display: flex; align-items: center; justify-content: center; outline: none !important; box-shadow: none !important; transition: transform 0.2s; padding: 0; margin: 0 !important; }
+.btn-send-cmd:active { transform: scale(0.8); }
+
+/* Premium Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 50px; }
+::-webkit-scrollbar-thumb:hover { background: #6b46c1; }
+
+/* Back to Top Icon */
+.back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: translateY(20px); }
+.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: #6b46c1; transform: translateY(-5px); box-shadow: 0 15px 40px rgba(107, 70, 193, 0.4); color: white; }
