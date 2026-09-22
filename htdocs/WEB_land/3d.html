@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    model-viewer {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+  <title>3D Model Debugging</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Debugging 3D Model Viewer</h1>
+    <p>Below is a known working 3D model.</p>
+    <model-viewer 
+      src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
+      alt="3D Astronaut Model" 
+      auto-rotate 
+      camera-controls 
+      shadow-intensity="1">
+    </model-viewer>
+  </div>
+</body>
+</html>
