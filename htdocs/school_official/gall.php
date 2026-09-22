@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>
+	Southern Railway Women’s Welfare Organization
+</title>
+	  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script> $j25=jQuery.noConflict();</script>
+    <script src="js/easyResponsiveTabs.js"></script>
+    <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+   
+    <style type="text/css" rel="stylesheet">
+       
+        #container {
+            width: 940px;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: 768px) {
+            #container {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script> $j23=jQuery.noConflict();</script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="source/jquery.fancybox.js?v=2.0.6"></script>
+    <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.0.6" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.2" />
+    <script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.2"></script>
+
+    
+
+    <!-- Add Media helper (this is optional) -->
+    <script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.0"></script>
+
+    <script type="text/javascript">
+        $j23(document).ready(function() {
+            $j23('.fancybox').fancybox();
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $j23(".fancybox-effects-d").fancybox({
+                padding: 0,
+
+                openEffect : 'elastic',
+                openSpeed  : 150,
+
+                closeEffect : 'elastic',
+                closeSpeed  : 150,
+
+                closeClick : true,
+
+                helpers : {
+                    overlay : null
+                }
+            });         
+
+            $j23('.fancybox-buttons').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                closeBtn  : false,
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    buttons : {}
+                },
+
+                afterLoad : function() {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
+
+   
+
+
+</head>
+
+
+
+<body>
+<?php include("header2.php")?>
+
+		
+		
+<!-- Back-To-Top -->
+<div class="container"> <a href="#" class="back-to-top text-center" style="display: inline;"> <i class="fa fa-angle-up"></i> </a> </div>
+<!--/#Back-To-Top--> 
+
+<!--header-->
+<?php include("menu.php")?>
+<!--/#header--> 
+ 
+<section style="background:url(images/page-banner-1.jpg)repeat scroll 0 0 / cover" class="page-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="page-banner-heading wow fadeInLeft animated animated" style="visibility: visible; animation-name: fadeInLeft;">SRWWO-MADURAI</h2>
+        <div class="bread-crumb wow fadeInRight animated animated" style="visibility: visible; animation-name: fadeInRight;"> <span class="initial-text"> <a href="index.php">Home</a>/ Gallery </span> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="services pading" style="margin-top:3em;">
+<div class="container">
+	<div class="col-md-9">
+<section class="w3l-gallery py-5" id="portfolio">
+        <div class="container py-lg-3">
+            <div class="title-section">
+              
+                <h3 class="global-title text-secondary">Event Gallery</h3>
+            </div>
+        
+             <!--Vertical Tab-->
+        <div id="parentVerticalTab">
+            <ul class="resp-tabs-list hor_1">
+                <li>Vertical 1</li>
+                <li>Vertical 2</li>
+                <li>Vertical 3</li>
+            </ul>
+            <div class="resp-tabs-container hor_1">
+                <div>
+                    <div class="row">
+
+
+
+       <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <a class="fancybox-buttons" data-fancybox-group="button" href="img/team-1.jpg"><img src="img/team-1.jpg" class="img-fluid" alt=""></a>
+                            <div class="mask rgba-white-slight"></div>
+                        </div>                       
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-3.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-4.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div>          
+        </div>
+                </div>
+
+ <!--First end-->               
+
+                <div>
+                     <div class="row">
+
+
+
+       <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>                       
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-1.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div>          
+        </div>
+                </div>
+
+<!--Second end-->
+
+
+                <div>
+                     <div class="row">
+
+
+
+       <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>                       
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div><div class="col-lg-3 col-md-12 mb-4">
+
+                        <div class="overlay z-depth-1-half">
+                            <img src="img/team-2.jpg" class="img-fluid" alt="">
+                            <div class="mask rgba-white-slight"></div>
+                        </div>
+
+                        
+
+                    </div>          
+        </div>
+                </div>
+
+<!--Third end-->
+
+            </div>
+        </div>
+        
+            <!--end portfolio-area -->
+        </div>
+        <!-- //gallery container -->
+    </section>
+    <!-- //portfolio -->
+	<!-- /booking -->
+
+<!-- //booking -->
+							</div>
+							
+</div>
+	</div>
+</div>
+</section>
+
+<!-- Footer -->
+<?php include("footer.php")?>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!-- jQuery-Photo-filter-lightbox-portfolio-plugin -->
+<script src="assets/js/jquery-1.7.2.js"></script>
+<script src="assets/js/jquery.quicksand.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+  
+	jQuery(function() {
+		jQuery(".slideshow").cycle({
+			fx: 'scrollHorz', easing: 'easeInOutCubic', timeout: 10000, speedOut: 800, speedIn: 800, sync: 1, pause: 1, fit: 0, 			pager: '#home-slides-pager',
+			prev: '#home-slides-prev',
+			next: '#home-slides-next'
+		});
+	});
+
+    </script>
+<script>
+			new UISearch( document.getElementById( 'form-search' ) );
+		</script>
+
+
+        <!--Plug-in Initialisation-->
+    <script type="text/javascript">
+    $j25(document).ready(function() {
+        //Horizontal Tab   
+
+        // Child Tab
+        $j25('#ChildVerticalTab_1').easyResponsiveTabs({
+            type: 'vertical',
+            width: 'auto',
+            fit: true,
+            tabidentify: 'ver_1', // The tab groups identifier
+            activetab_bg: '#fff', // background color for active tabs in this group
+            inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
+            active_border_color: '#c1c1c1', // border color for active tabs heads in this group
+            active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
+        });
+
+        //Vertical Tab
+        $j25('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+		
+		</body>
+</html>

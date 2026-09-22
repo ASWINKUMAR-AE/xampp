@@ -1,0 +1,202 @@
+<?php include("header1.php")?>
+
+<!-- Back-To-Top -->
+<style type="text/css">
+<!--
+.style1 {font-size: 36px}
+-->
+</style>
+
+<div class="container"> <a href="#" class="back-to-top text-center" style="display: inline;"> <i class="fa fa-angle-up"></i> </a> </div>
+<!--/#Back-To-Top--> 
+
+<!--header-->
+<?php include("menu1.php")?>
+
+<style type="text/css">
+.note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+
+</style>
+
+<section class="pading">
+ 
+<div class="container">
+            <div class="form">
+                <div class="note">
+                    <p class="style1">Apply Now</p>
+                </div>
+
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+						   <form method="post" action="service_con.php">
+						    <?php							
+	   
+include 'dbcon.php';
+																			$query1=mysql_query("select count(sno)+1 as number from student ");
+																			$query2=mysql_fetch_array($query1);
+																			$numb=$query2['number'];
+																			if($numb==0)
+																			{
+																				$ns="RNETI-";
+																				$numbe=$ns+1;
+																			}
+																			else
+																			{
+																				$ns="RNETI-";
+																				$numbe=$ns.$numb;
+																			}
+																			
+
+																			?>
+						    <div class="form-group">
+                                <input type="text" class="form-control"  name="sno" required="" id="sno" placeholder="student id*" value="<?php echo $numbe; ?>"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control"  name="sname" required="" id="sname" placeholder="Student Name *" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="5" class="form-control"  name="addr" required="" id="addr" placeholder=" Address *"></textarea>
+                            </div>
+							<div class="form-group" style="color:#000000">
+                                <input type="text" class="form-control"   name="email" required="" id="email" placeholder="Email*" value=""/>
+                            </div>
+							 <div class="form-group">
+                                	<select class="form-control"  name="dep" id="dep">
+			
+			<option selected="MSC IT">MSC IT</option>
+			<option selected="MCA">MCA</option>
+			<option selected="EEE">EEE</option>
+				<option selected="ECE">ECE</option>
+			<option selected="MECH">MECH</option>
+			<option selected="CIVIL">CIVIL</option>
+			<option selected=""> Select Department</option>
+		</select>
+                            </div>
+							
+							
+								 <div class="form-group">
+                                	<select class="form-control"  name="cour" id="cour">
+			
+			<option selected="Java">Java</option>
+			<option selected="C C++">C C++</option>
+			<option selected="DCA">DCA</option>
+			<option selected="Photoshop">Photoshop</option>
+			<option selected="Tally">Tally</option>
+			<option selected="J2EE">J2EE</option>
+			<option selected="PHP">PHP</option>
+			<option selected="Dotnet">Dotnet</option>
+			<option selected="MatLap">Matlap</option>
+			<option selected="Python">Python</option>
+			<option selected="Android">Android</option>
+			<option selected="Hardware Networking">Hardware Networking</option>
+			<option selected="SQL">SQL</option>
+			<option selected="Big Data Processing">Big Data Processing</option>
+			<option selected="Embedded">Embedded</option>
+			<option selected="IBT">IBT</option>
+			<option selected="Internship">Internship</option>
+			<option selected=""> Select Course</option>
+		</select>
+                            </div>
+							<div class="form-group">
+                    <select class="form-control"  name="dur" id="dur">
+			
+			<option selected="1 Month">1 Month</option>
+			<option selected="2 Month">2 Month</option>
+			<option selected="3 Month">3 Month</option>
+				<option selected="4 Month">4 Month</option>
+				<option selected="">Duration</option>
+
+		</select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required=""  name="dob" id="dob" placeholder="Date of Birth"
+                    onfocus="(this.type='date')" value=""/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control"  name="mno" required="" id="mno" placeholder="Phone/Mobile*" value=""/>
+                            </div>
+							
+							 <div class="form-group">
+                                	<select class="form-control"  name="ecom" id="ecom">
+			
+			<option selected="+2">+2</option>
+			<option selected="Ug Degree">Ug Degree</option>
+			<option selected="PG Degree">PG Degree</option>
+				<option selected="Diploma">Diploma</option>
+				<option selected="Other">Other</option>
+				<option selected=""> Education Completed</option>
+		</select>
+                            </div>
+										 <div class="form-group">
+                                	<select class="form-control"  name="yea" id="yea">
+		
+			<option selected="I">I</option>
+			<option selected="II">II</option>
+			<option selected="III">III</option>
+				<option selected="IV">IV</option>
+	<option selected=""> Select Year</option>
+		</select>
+                            </div>
+						
+							 <div class="form-group">
+                                <input type="text" class="form-control"   name="noi" id="noi" style="color:#000000" required="" placeholder="Name of the Institution*" value=""/>
+                            </div>
+							<div class="form-group">
+                                	<select class="form-control"  name="pg" id="pg">
+			
+			<option selected="Railway">Railway</option>
+			<option selected="Non-Railway">Non-Railway</option>
+			<option selected="Parent/Guardian">Parent/Guardian </option>
+	
+
+		</select>
+                            </div>
+							 <div class="form-group">
+                               <input name="" type="file"  class="form-control"  />
+							   
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btnSubmit">Register Now</button>
+		<!--			 <div class="topnav-right pull-right"><a href="mreport.php"><font color="#0066FF">Download pdf</font></a></div>-->
+					</form>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<!--/#Partner--> 
+
+<!-- Footer -->
+<?php include("footer1.php")?>
