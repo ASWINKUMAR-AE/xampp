@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DRAWING WITH ASWIN</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/ani.css">
+	<link rel="website icon" type="png"  href="img/LOGO3.png" style="width:50px; height:50px;" >
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<style>
+body{
+    width:98%;
+
+}
+
+.form_wrapper{
+  animation:check ease 1s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+
+}
+input,h2,i,textarea{
+  animation:fade ease 8s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+
+}
+
+.form_wrapper{
+    background-color: rgb(66, 65, 65);
+    box-shadow: rgba(14, 13, 13, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(14, 13, 13, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+    width:50%;
+    border-radius: 10px;
+}
+h2,label{
+    color:orange;
+}
+input{
+    margin: 9px;
+    border-radius: 5px;
+    background-color: rgb(214, 212, 212);
+}
+input:hover{
+  transform: scale(1.2);
+  
+}
+@media (max-width: 600px) {
+body{
+ overflow: hidden;
+}
+.form_wrapper{
+position: relative;
+left:-250px;
+}
+#text1{
+  font-size: 15px !important;
+}
+  
+  }
+
+</style>
+</head>
+    <body class="container">
+
+
+
+<center>
+  <br>
+
+        <div class="form_wrapper container-flex" style="width: 850px;" >
+            <div class="form_container">
+              <div class="title_container">
+                <br>
+                <h2 id="text1">Registration for drawing order</h2>
+                <hr style="color: orange;">
+              </div>
+              <div class="row clearfix">
+                <div class="">
+                  <form  method="post" action="https://script.google.com/macros/s/AKfycbytCP6xCdIJEZOmU82D3u7EN18crglEDa_XtdLI__swRAxRlaDVdZtOt9n7RmtAsWS3jQ/exec" name="contact-form" >
+                    <div class="row clearfix">
+                        <div class="col_half">
+                          <div class="input_field in1"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                            <input type="text" name="First-Name" placeholder="First Name" /> 
+                          </div>
+                          
+                        </div>
+                        <div class="col_half">
+                          <div class="input_field in1"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                            <input type="text" name="Last-Name" placeholder="Last Name" required />
+                          </div>
+                        </div>
+                      </div>
+                    <div class="input_field in1"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                      <input type="email" name="gmail" placeholder="gmail" required />
+                    </div>
+                    <div class="input_field in1"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                      <input type="phone" name="phone-number" placeholder="91+" required />
+                    </div>
+                    <div class="input_field in1"> <span><i aria-hidden="true" class="fa fa-map-marker"></i></span>
+                      <textarea style="background-color: lightgray;" name="address" placeholder="address" ></textarea>
+                    </div>
+<br>
+                          <div class="input_field radio_option">
+                        <input type="radio" name="singalface" id="rd1">
+                        <label for="rd1">singal face (Rs.100/-)</label><br>
+                        <input type="radio" name="moreface" id="rd2">
+                        <label for="rd2">two or more face (Rs.120/- to Rs.200/-)</label>
+                        </div>
+                        <label>submit the work on:</label>
+                        <input type="date" name="workdonedate" ><br>
+                       <label>Upload your image :</label>
+                   <input type="file" accept="image/*" value="img" name="image" style="border-radius: 10px; background-color: orange; color:white;">
+                <br>
+                <input class="button" type="submit" value="submit"  style="background-color: orange; color:white; border: none; border-radius: 10px; width:100px; height:50px; "  />
+               
+              </form>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+         
+
+        </center>
+     
+          <script src="js/jq.js"></script>
+    <script src="js/bootstrap.js"></script>
+   
+</body>
+</html>

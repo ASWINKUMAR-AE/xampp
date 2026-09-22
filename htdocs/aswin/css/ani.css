@@ -1,0 +1,180 @@
+@keyframes bubbles {
+    from {
+    transform: translate();
+    }
+    to {
+    transform: translate(0, -66.666%);
+    }
+    }
+
+    
+@keyframes move {
+    0% {
+        left: -50px;
+    }
+  
+    100% {
+       left: -5px;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      left: 450px;
+    }
+  
+    100% {
+       left: 550px;
+    }
+  }
+ 
+  @keyframes movel {
+    0% {
+        left: 0px;
+    }
+  
+    100% {
+       left: 55px;
+    }
+  }
+    
+   
+  @keyframes fade {
+    0% {
+        opacity:  0%;
+    }
+  
+    100% {
+       opacity: 100%;
+    }
+  }
+
+  @keyframes fe {
+    0% {
+       width:3%;
+    }
+  
+    100% {
+    width:75%;
+    }
+  }
+
+  @keyframes dropdowntop {
+    0% {
+       position: relative;
+       top:-70px;
+    }
+  
+    100% {
+      position: relative;
+      top:-7px;
+    }
+  }
+
+  
+  @keyframes noteani {
+    0% {
+   
+      width:10px;
+      height:187px;
+    }
+  10%{
+    width:50%;
+
+  }
+  25%{
+    width:100%;
+ 
+  }
+  50%{
+    width:100%;
+
+  }
+  75%{
+    width:100%;
+ 
+  }
+  85%{
+    width:100%;
+  
+  }
+  95%{
+    width: 100%;
+
+
+  }
+    100% {
+ width:100%;
+
+    }
+  }
+
+  
+
+  @keyframes lo{
+    0%{
+      width: 0%;
+      background-color: green;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+        
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 96%;
+        background-color: orange;
+    }
+  }
+
+  @keyframes order{
+    0%{
+      width: 25;
+
+    }
+    
+    100%{
+      width: 250;
+    }
+  }
+  
+  @-webkit-keyframes check {
+    0% { 
+      height: 0;
+       width: 0;
+       }
+    25% {
+       height: 0;
+        width: 7px;
+       }
+    50% { 
+      height: 20px;
+       width: 7px;
+       }
+  }
+  
+
+  
+  @keyframes expand { 
+    0% { -webkit-transform: scale3d(1,0,1); opacity:1; }
+    25% { -webkit-transform: scale3d(1,1.2,1); }
+    50% { -webkit-transform: scale3d(1,0.85,1); }
+    75% { -webkit-transform: scale3d(1,1.05,1); }
+    100% { -webkit-transform: scale3d(1,1,1);  opacity:1; }
+  }
+  
+
+  
+
+  
+  @keyframes bounce { 
+    0% { -webkit-transform: translate3d(0,-25px,0); transform: translate3d(0,-25px,0); opacity:0; }
+    25% { -webkit-transform: translate3d(0,10px,0); transform: translate3d(0,10px,0); }
+    50% { -webkit-transform: translate3d(0,-6px,0); transform: translate3d(0,-6px,0); }
+    75% { -webkit-transform: translate3d(0,2px,0); transform: translate3d(0,2px,0); }
+    100% { -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); opacity: 1; }
+  }
