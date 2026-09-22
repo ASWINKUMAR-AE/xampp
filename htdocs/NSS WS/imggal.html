@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+<title>NSS</title>
+<style>
+  body {
+background-color: rgb(59, 58, 58);
+overflow-y: hidden !important;
+overflow-x: hidden !important;
+  }
+
+  .portfolio-menu{
+	text-align:center;
+}
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+
+.portfolio-item{
+	/*width:100%;*/
+}
+.portfolio-item .item{
+	/*width:303px;*/
+	float:left;
+	margin-bottom:10px;
+}
+
+  /* p {
+    height: 150px;
+    width: 500px;
+    margin: 0px auto;
+    position: relative;
+  }
+  .ds{
+
+  }
+
+  .sa {
+    height: 120px;
+    position: absolute;
+    left: 0;
+    border-radius: 20px !important;
+    offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
+    box-shadow: 10px 10px 55px black;
+    transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84), box-shadow .3s, z-index .3s;
+    z-index: 0;
+  }
+
+  .sa:hover {
+    transform: scale(3);
+    offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
+
+    box-shadow: 10px 10px 55px black;
+    z-index: 999;
+  }
+
+  /* 3 images */
+  /* .sa:nth-last-child(3):first-child {
+    offset-distance: 17%;
+  }
+  .sa:nth-last-child(2):nth-child(2) {
+    offset-distance: 49%;
+  }
+  .sa:last-child:nth-child(3) {
+    offset-distance: 81%;
+  }
+
+  /* 4 images 
+  .sa:nth-last-child(4):first-child {
+    offset-distance: 10%;
+  }
+  .sa:nth-last-child(3):nth-child(2) {
+    offset-distance: 35%;
+  }
+  .sa:nth-last-child(2):nth-child(3) {
+    offset-distance: 65%;
+  }
+  .sa:last-child:nth-child(4) {
+    offset-distance: 90%;
+  }*/
+
+  /* 5 images 
+  .sa:nth-last-child(5):first-child {
+    offset-distance: 0%;
+  }
+  .sa:nth-last-child(4):nth-child(2) {
+    offset-distance: 25%;
+  }
+  .sa:nth-last-child(3):nth-child(3) {
+    offset-distance: 51%;
+  }
+  .sa:nth-last-child(2):nth-child(4) {
+    offset-distance: 75%;
+  }
+  .sa:last-child:nth-child(5) {
+    offset-distance: 100%;
+  }
+ Mobile responsive styles 
+  @media (max-width: 600px) {
+    p {
+      width: 90%;
+      height: auto;margin-top: 70px !important;
+    }
+
+    .sa {
+      height: 60px;
+      margin-left: -10px !important;
+
+      offset-path: path('m 0 25 q 25-15 50-15 t 50 15 50 0 50-15 50 15');
+    }
+
+    .sa:hover {
+      transform: scale(2);
+      offset-path: path('m 2.5 32.5 q 22.5-0 45-0 t 45 0 45 0 45-0 45 0');
+    }
+    .ds{
+ display:none !important; 
+margin-top: 50px !;
+    }
+    center{
+      position: relative;
+      left:10%;
+    }
+  } */ */
+
+
+
+  .item {
+    position: relative;
+}
+
+.item img {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item.dimmed {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+</style>
+</head>
+<body>
+<!-- <center class="col-12"><div>
+  <p style="margin-top: 70px;">
+    <img src="img/pic4.jpeg" class="sa">
+    <img src="img/pic2.jpeg" class="sa">
+    <img src="img/pic3.jpeg" class="sa">
+    <img src="img/pic1.jpeg" class="sa">
+  </p>
+
+  <p class="ds">
+    <img src="img/pic5.jpeg" class="sa">
+    <img src="img/pic6.jpeg" class="sa">
+    <img src="img/pic3.jpeg" class="sa">
+    <img src="img/pic2.jpeg" class="sa">
+  </p>
+</div>
+</center> --><br>
+
+<div class="container">
+
+  
+  <div class="portfolio-item row">
+     <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic4.jpeg" class="fancylight popup-btn" data-fancybox-group="light"> 
+        <img class="img-fluid" src="img/pic4.jpeg" alt="">
+        </a>
+     </div>
+     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic2.jpeg" class="fancylight popup-btn" data-fancybox-group="light"> 
+        <img class="img-fluid" src="img/pic2.jpeg" alt="">
+        </a>
+     </div>
+     <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic3.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+        <img class="img-fluid" src="img/pic3.jpeg" alt="">
+        </a>
+     </div>
+     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic1.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+        <img class="img-fluid" src="img/pic1.jpeg" alt="">
+        </a>
+     </div>
+     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic5.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+        <img class="img-fluid" src="img/pic5.jpeg" alt="">
+        </a>
+     </div>
+     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic6.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+        <img class="img-fluid" src="img/pic6.jpeg" alt="">
+        </a>
+     </div>
+     <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic3.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+        <img class="img-fluid" src="img/pic3.jpeg" alt="">
+        </a>
+     </div>
+     <div class="item lap col-lg-3 col-md-4 col-6 col-sm">
+        <a href="img/pic2.jpeg" class="fancylight popup-btn" data-fancybox-group="light">
+        <img class="img-fluid" src="img/pic2.jpeg" alt="">
+        </a>
+     </div>
+    
+  </div>
+</div>
+<script>    
+   $('.portfolio-menu ul li').click(function(){
+     $('.portfolio-menu ul li').removeClass('active');
+     $(this).addClass('active');
+     
+     var selector = $(this).attr('data-filter');
+     $('.portfolio-item').isotope({
+       filter:selector
+     });
+     return  false;
+   });
+   $(document).ready(function() {
+   var popup_btn = $('.popup-btn');
+   popup_btn.magnificPopup({
+   type : 'image',
+   gallery : {
+     enabled : true
+   }
+   });
+   });
+   
+   $(document).ready(function() {
+    $(".item").hover(
+        function() {
+            $(".item").addClass("dimmed");
+            $(this).removeClass("dimmed");
+        },
+        function() {
+            $(".item").removeClass("dimmed");
+        }
+    );
+});
+
+   </script>
+
+</body>
+</html>

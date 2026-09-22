@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5" style="border: 2px solid black; padding: 30px; border-radius: 10px;">
+        <h3>Reset Password</h3>
+        <form id="resetForm">
+            <div class="form-group">
+                <label for="reg_no">Registration Number</label>
+                <input type="text" class="form-control" id="reg_no" name="reg_no" required>
+                <div id="regNoError" class="text-danger"></div>
+            </div>
+            <div class="form-group">
+                <label for="new_pwd">New Password</label>
+                <input type="password" class="form-control" id="new_pwd" name="new_pwd" required>
+                <div id="pwdError" class="text-danger"></div>
+            </div>
+            <div class="form-group" id="otpField" style="display: none;">
+                <label for="otp">OTP</label>
+                <input type="text" class="form-control" id="otp" name="otp" required>
+                <div id="otpError" class="text-danger"></div>
+            </div>
+            <div>
+                <h6 id="otp_mes" style="display:none;">A 6 digit OTP is sent to your Registered Mail-ID. Enter the OTP to reset your password.</h6>
+            </div>
+            <button class="btn btn-danger">
+                <a href="login_in.php" style="color: #fff; text-decoration: none;">Back</a>
+            </button>
+            <button type="button" id="generateOtpBtn" class="btn btn-primary float-right" onclick="generateOTP()">Generate OTP</button>
+            <button type="submit" id="updatePwdBtn" class="btn btn-primary float-right" style="display: none;">Update Password</button>
+        </form>
+        <div id="message" class="mt-3 text-danger"></div>
+    </div>
+
+    <script>
+        function generateOTP() {
+            var regNo = document.getElementById('reg_no').value;
+            var pwd = document.getElementById('new_pwd').value;
+
+            // Log the values of registration number and password for debugging
+            console.log('Registration Number:', regNo);
+            console.log('Password:', pwd);
+
+            // Validate registration number and password
+            if (!regNo || !pwd) {
+                console.error('Registration number and password are required.');
+                document.getElementById('message').innerText = 'Registration number and password are required.';
+                return;
+            }
+
+            // Perform AJAX request to generate OTP
+            var formData = new FormData(document.getElementById('resetForm'));
+            fetch('reset_pwd.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text()) // Get response as text
+            .then(text => {
+                console.log('Raw Response:', text); // Log raw response
+                let data;
+                try {
+                    data = JSON.parse(text); // Attempt to parse JSON
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                    document.getElementById('message').innerText = 'An error occurred while processing the response.';
+                    return;
+                }
+
+                // Log the parsed response data for debugging
+                console.log('Parsed Response Data:', data);
+
+                // Check if response contains an error
+                if (data.error) {
+                    console.error('Error:', data.error);
+                    document.getElementById('message').innerText = data.error;
+                    document.getElementById('otpField').style.display = 'none';
+                    document.getElementById('updatePwdBtn').style.display = 'none';
+                    document.getElementById('otp_mes').style.display = 'none';
+                } else if (data.otp) {
+                    // Display OTP field
+                    console.log('OTP received:', data.otp);
+                    document.getElementById('otpField').style.display = 'block';
+                    document.getElementById('updatePwdBtn').style.display = 'block';
+                    document.getElementById('otp_mes').style.display = 'block';
+                    // Hide the "Generate OTP" button
+                    document.getElementById('generateOtpBtn').style.display = 'none';
+                } else {
+                    console.error('Unexpected response:', data);
+                    document.getElementById('message').innerText = 'Unexpected response from server.';
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                document.getElementById('message').innerText = 'An error occurred while generating the OTP.';
+            });
+        }
+
+        document.getElementById('resetForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var formData = new FormData(this);
+            fetch('reset_pwd.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('message').innerText = data.error;
+                } else if (data.success) {
+                    document.getElementById('message').innerText = data.success;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('message').innerText = 'An error occurred while updating the password.';
+            });
+        });
+    </script>
+</body>
+</html>
