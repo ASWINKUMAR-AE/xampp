@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Muheshkumar R</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-u3Y6eDB2RtowlyB3N8Jsc1zftyhO9ZvToVa2LHLT0Uq8iWNFNH3PoO9GYlC7bBT/5" crossorigin="anonymous">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <link href="navbar.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0,0,0.5)), url("https://i.ibb.co/mqH5JHf/F-q-E0rz-Wo-AATJMo.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner .bcon {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .banner .bcon h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .banner .bcon p {
+            margin-bottom: 40px;
+        }
+
+        .banner .bcon button {
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .banner .bcon button:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="premium-nav" data-aos="fade-down">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-text">Fab Academy</span>
+            <div class="logo-shine"></div>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active" style="text-decoration: none;">
+                <i class="ri-home-5-line"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-link" style="text-decoration: none;">
+                <i class="ri-information-line"></i>
+                <span>About</span>
+            </a>
+            <a href="final_proj.html" class="nav-link" style="text-decoration: none;">
+                <i class="ri-stack-line"></i>
+                <span>Final Project</span>
+            </a>
+            <a href="Weekly Assignment.html" class="nav-link" style="text-decoration: none;">
+                <img width="20" height="20" src="https://img.icons8.com/windows/32/work.png" alt="work" />
+                <span>Weekly Assignment</span>
+            </a> 
+            <a href="#footer" class="nav-link" style="text-decoration: none;">
+                <i class="ri-mail-line"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-moon-line moon-icon"></i>
+            </button>
+            <button class="mobile-menu" aria-label="Menu">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner Section with AOS Animation -->
+<div class="banner">
+    <div class="bcon" data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="zoom-in" data-aos-duration="2000">
+            <h1 data-aos="fade-up" data-aos-delay="500">Design Your House</h1>
+            <p data-aos="fade-up" data-aos-delay="700">By using our website you can design your own website very beautifully. <br> Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit.</p>
+            <div>
+                <button type="button" data-aos="fade-up" data-aos-delay="900">WATCH MORE</button>
+                <button type="button" data-aos="fade-up" data-aos-delay="1100">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section with AOS Animation -->
+<footer id="footer" class="text-center" style="background-color: #1a1a1a; color: #d3d3d3 !important;" data-aos="fade-up">
+    <div class="container pt-4">
+        <section class="mb-4">
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="tel:+91XXXXXXXXXX" role="button" data-aos="flip-left">
+                <img src="https://img.icons8.com/ios-filled/20/ffffff/phone.png" alt="Phone" width="20" height="20" />
+            </a>
+
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="mailto:your-email@gmail.com" role="button" data-aos="flip-right">
+                <img src="https://img.icons8.com/ios-filled/20/ffffff/gmail.png" alt="Gmail" width="20" height="20" />
+            </a>
+
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.linkedin.com/in/yourprofile" target="_blank" role="button" data-aos="flip-left">
+                <img src="https://img.icons8.com/ios-filled/20/ffffff/linkedin.png" alt="LinkedIn" width="20" height="20" />
+            </a>
+
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://www.instagram.com/yourprofile" target="_blank" role="button" data-aos="flip-right">
+                <img src="https://img.icons8.com/ios-filled/20/ffffff/instagram-new.png" alt="Instagram" width="20" height="20" />
+            </a>
+
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://github.com/yourprofile" target="_blank" role="button" data-aos="flip-left">
+                <img src="https://img.icons8.com/ios-filled/20/ffffff/github.png" alt="GitHub" width="20" height="20" />
+            </a>
+
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="https://gitlab.com/yourprofile" target="_blank" role="button" data-aos="flip-right">
+                <img src="https://img.icons8.com/ios-filled/20/ffffff/gitlab.png" alt="GitLab" width="20" height="20" />
+            </a>
+        </section>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.1); color: #d3d3d3;">
+        © 2025 Copyright
+        <a class="text-light" href="#">2025 Muheshkumar R</a>
+    </div>
+</footer>
+
+<!-- AOS Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000, // Animation duration
+        once: true, // Animation happens only once
+    });
+</script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+<script src="navbar.js"></script>
+
+</html>
