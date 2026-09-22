@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEase Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body data-theme="dark">
+    <!-- Pre-loader -->
+    <div id="preloader">
+        <div class="brand-name">GoEase</div>
+        <div class="loader"></div>
+        <div class="loader-text">Loading Dashboard...</div>
+    </div>
+    
+    <!-- Welcome Message -->
+    <div class="welcome-message" id="welcomeMessage">
+        Welcome to GoEase<br>
+        <small>Your Smart Driving Companion</small>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div id="gaugecontainer" style="display: none; position: absolute; left: 100px; top:10%;">
+        <div id="gauge">
+            <div id="scale"></div>
+            <div id="scalemask"></div>
+            <div id="zeromark"></div>
+            <div id="gaugelabel">KM/H</div>
+
+            <div class="labelpos" id="pos0">⠀⠀0</div>
+            <div class="labelpos" id="pos10">
+                <div class="scLab" id="lab10">⠀10</div>
+            </div>
+            <div class="labelpos" id="pos20">
+                <div class="scLab" id="lab20">⠀20</div>
+            </div>
+            <div class="labelpos" id="pos30">
+                <div class="scLab" id="lab20">⠀30</div>
+            </div>
+            <div class="labelpos" id="pos40">
+                <div class="scLab" id="lab40">⠀40</div>
+            </div>
+            <div class="labelpos" id="pos50">
+                <div class="scLab" id="lab50">⠀50</div>
+            </div>
+            <div class="labelpos" id="pos60">
+                <div class="scLab" id="lab60">⠀60</div>
+            </div>
+            <div class="labelpos" id="pos70">
+                <div class="scLab" id="lab70">⠀70</div>
+            </div> 
+            <div class="labelpos" id="pos80">
+                <div class="scLab" id="lab80">⠀80</div>
+            </div>
+            <div class="labelpos" id="pos90">
+                <div class="scLab" id="lab90">⠀90</div>
+            </div>
+            <div class="labelpos" id="pos100">
+                <div class="scLab" id="lab100">100</div>
+            </div>
+        </div>
+        <div id="center"><span id="valueshow"></span></div>
+        <div id="cornerborder">
+            <div id="odometer">ODO
+                <div id="km_total">171234</div>
+            </div>
+            <div id="tripmeter">TRIP
+                <div id="tripswitch_1"></div>
+                <div id="tripswitch_2"></div>
+                <div id="km_trip">0352</div>
+                <div id="km_trip_decimal">. 7</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Battery Indicator -->
+    <div id="battery-container" style="
+    display: none;
+    position: absolute;
+    right: 300px;
+    top: 40%;
+    transform: rotate(-90deg);
+    width: 180px; 
+    height: 70px;  
+    background: linear-gradient(145deg, rgba(30, 30, 30, 0.95), rgba(20, 20, 20, 0.9));
+    border: 2px solid #ff6b35;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4),
+                inset 0 0 15px rgba(0, 0, 0, 0.6),
+                0 5px 30px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    backdrop-filter: blur(3px);
+    overflow: visible;
+">
+    <!-- Battery tip with glow effect -->
+    <div style="
+        position: absolute;
+        right: -9px;
+        top: 25px;
+        width: 7px;
+        height: 24px;
+        background: #ff6b35;
+        border-radius: 0 4px 4px 0;
+        box-shadow: 0 0 10px rgba(255, 107, 53, 0.7);
+        z-index: 2;
+    "></div>
+    
+    <!-- Outer glow effect -->
+    <div style="
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 12px;
+        background: radial-gradient(circle at center, rgba(255,107,53,0.2) 0%, transparent 70%);
+        z-index: -1;
+        pointer-events: none;
+    "></div>
+    
+    <div id="battery-level" class="progress" style="
+        height: 100%;
+        background: rgba(10, 10, 10, 0.8);
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.8),
+                    0 2px 5px rgba(0, 0, 0, 0.3);
+        position: relative;
+    ">
+        <!-- Energy pulse effect -->
+        <div style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                to right,
+                transparent 0%,
+                rgba(255,255,255,0.1) 50%,
+                transparent 100%
+            );
+            animation: energy-pulse 3s infinite linear;
+            opacity: 0.4;
+            pointer-events: none;
+        "></div>
+        
+        <div id="battery-fill" class="progress-bar progress-bar-striped progress-bar-animated" 
+             role="progressbar" 
+             style="
+                width: 15%;
+                background: linear-gradient(90deg, 
+                    #ff6b35 0%, 
+                    #ff8c5a 50%, 
+                    #ff6b35 100%);
+                box-shadow: 0 0 15px rgba(255, 107, 53, 0.7),
+                            inset 0 0 10px rgba(255, 255, 255, 0.2);
+                transition: width 0.7s cubic-bezier(0.65, 0, 0.35, 1), 
+                            background 0.5s ease,
+                            box-shadow 0.5s ease;
+                position: relative;
+                overflow: hidden;
+                border-radius: 4px;
+             " 
+             aria-valuenow="15" 
+             aria-valuemin="0" 
+             aria-valuemax="100">
+             
+             <!-- Inner glow effect -->
+             <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(255,255,255,0.15) 0%,
+                    transparent 50%,
+                    rgba(0,0,0,0.2) 100%
+                );
+                border-radius: 4px;
+             "></div>
+        </div>
+    </div>
+    
+    <div id="battery-percentage" style="
+        position: absolute;
+        left: -80px;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        font-family: 'Eurostile', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ff6b35;
+        text-shadow: 0 0 12px rgba(255, 107, 53, 0.7),
+                    0 0 5px rgba(255, 255, 255, 0.3);
+        letter-spacing: 1.5px;
+        padding: 5px 10px;
+        background: rgba(20, 20, 20, 0.6);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 107, 53, 0.3);
+        min-width: 60px;
+        text-align: center;
+        transition: all 0.3s ease;
+    ">15%</div>
+    
+    <div id="battery-label" style="
+        position: absolute;
+        right: 0px;
+        bottom: 125px;
+        top:90px;
+        font-family: 'Eurostile', sans-serif;
+        font-size: 12px;
+        color: #ff6b35;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        transform: rotate(90deg);
+        opacity: 0.9;
+        text-shadow: 0 0 8px rgba(255, 107, 53, 0.5);
+        padding: 3px 8px;
+        background: rgba(20, 20, 20, 0.5);
+        border-radius: 3px;
+        border: 1px solid rgba(255, 107, 53, 0.2);
+    ">POWER CELL</div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            var batteryContainer = document.getElementById('battery-container');
+            if(batteryContainer) {
+                batteryContainer.style.display = 'block';
+                
+                // Enhanced appear animation
+                batteryContainer.style.opacity = '0';
+                batteryContainer.style.transform = 'rotate(-90deg) translateY(20px)';
+                setTimeout(function() {
+                    batteryContainer.style.opacity = '1';
+                    batteryContainer.style.transform = 'rotate(-90deg) translateY(0)';
+                }, 10);
+            }
+        }, 20000);
+    });
+
+    // Animation for energy pulse effect
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes energy-pulse {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        @keyframes critical-alert {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Function to update battery level with dynamic effects
+    function updateBatteryLevel(percent) {
+        const fill = document.getElementById('battery-fill');
+        const percentText = document.getElementById('battery-percentage');
+        
+        fill.style.width = `${percent}%`;
+        fill.setAttribute('aria-valuenow', percent);
+        percentText.textContent = `${percent}%`;
+        
+        // Dynamic color changes
+        if (percent <= 15) {
+            fill.style.background = 'linear-gradient(90deg, #ff0000 0%, #ff5252 50%, #ff0000 100%)';
+            fill.style.boxShadow = '0 0 20px rgba(255, 0, 0, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.3)';
+            fill.style.animation = 'critical-alert 0.8s infinite';
+        } else if (percent <= 30) {
+            fill.style.background = 'linear-gradient(90deg, #ff6b35 0%, #ff8c5a 50%, #ff6b35 100%)';
+            fill.style.boxShadow = '0 0 15px rgba(255, 107, 53, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.2)';
+            fill.style.animation = 'none';
+        } else {
+            fill.style.background = 'linear-gradient(90deg, #4CAF50 0%, #8BC34A 50%, #4CAF50 100%)';
+            fill.style.boxShadow = '0 0 15px rgba(76, 175, 80, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.2)';
+            fill.style.animation = 'none';
+        }
+    }
+</script>
+
+    <div class="controls-container" style="display: none; position: absolute;  top:20%;">
+        <button id="accelerate" class="control-button" onclick="changeSpeed(5)">Accelerate</button>
+        <button id="brake" class="control-button" onclick="changeSpeed(-5)">Brake</button>
+    </div>
+
+    <!-- <div class="slidecontainer" style="display: none;">
+        <input type="range" min="0" max="100" value="1" class="slider" id="kmhslider">
+        <p>km/h: <span id="valueshow"></span></p>
+    </div>
+
+    <button id="tripswitchbutton" onclick="switchTrip()" style="display: none;">switch trip</button> -->
+    <!-- <button id="theme-toggle" onclick="toggleTheme()" style="display: none;">Toggle Theme</button> -->
+
+    <script>
+        // Pre-loader and welcome message functionality
+        window.addEventListener('load', function() {
+            // Hide preloader after 2 seconds
+            setTimeout(function() {
+                document.getElementById('preloader').style.opacity = '0';
+                
+                // Show welcome message
+                document.getElementById('welcomeMessage').classList.add('show');
+                
+                // Hide preloader completely after fade out
+                setTimeout(function() {
+                    document.getElementById('preloader').style.display = 'none';
+                    
+                    // Hide welcome message after 3 seconds
+                    setTimeout(function() {
+                        document.getElementById('welcomeMessage').classList.remove('show');
+                        
+                        // Show dashboard content
+                        setTimeout(function() {
+                            const elementsToShow = [
+                                document.getElementById('gaugecontainer'),
+                                document.getElementById('battery-container'),
+                                document.querySelector('.controls-container'),
+                                document.querySelector('.slidecontainer'),
+                                document.getElementById('tripswitchbutton'),
+                                document.getElementById('theme-toggle')
+                            ];
+                            
+                            elementsToShow.forEach(element => {
+                                if (element) element.style.display = 'block';
+                            });
+                            
+                            // Initialize gauge and other functionality
+                            initGauge();
+                        }, 500);
+                    }, 3000);
+                }, 500);
+            }, 2000);
+        });
+        
+        // Your existing gauge functions
+        function initGauge() {
+            // Initialize your gauge here
+            console.log("Gauge initialized");
+            // Add your existing gauge initialization code
+        }
+        
+        function changeSpeed(amount) {
+            // Your speed change logic
+        }
+        
+        function switchTrip() {
+            // Your trip switch logic
+        }
+        
+        function toggleTheme() {
+            // Your theme toggle logic
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
