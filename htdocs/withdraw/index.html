@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Wallet - Cash Withdrawal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>💰 Driver Wallet</h1>
+            <p class="subtitle">Manage your earnings and withdrawals</p>
+        </header>
+
+        <!-- Wallet Balance Card -->
+        <div class="wallet-card">
+            <div class="balance-section">
+                <p class="balance-label">Available Balance</p>
+                <h2 class="balance-amount" id="balanceAmount">₹ --</h2>
+                <div class="loading-spinner" id="balanceLoader">
+                    <div class="spinner"></div>
+                    <p>Loading balance...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Withdrawal Form Card -->
+        <div class="withdrawal-card">
+            <h3>💸 Withdraw Cash</h3>
+            
+            <form id="withdrawalForm">
+                <div class="form-group">
+                    <label for="driverId">Driver ID</label>
+                    <input 
+                        type="number" 
+                        id="driverId" 
+                        name="driverId" 
+                        placeholder="Enter your driver ID" 
+                        required
+                        min="1"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Withdrawal Amount (₹)</label>
+                    <input 
+                        type="number" 
+                        id="amount" 
+                        name="amount" 
+                        placeholder="Enter amount (min ₹100)" 
+                        required
+                        min="100"
+                        step="1"
+                    >
+                    <small class="form-hint">Minimum withdrawal: ₹100</small>
+                </div>
+
+                <button type="submit" class="btn-withdraw" id="withdrawBtn">
+                    <span class="btn-text">Withdraw Money</span>
+                    <span class="btn-loader" style="display: none;">
+                        <div class="btn-spinner"></div>
+                        Processing...
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Message Display -->
+        <div class="message-container" id="messageContainer" style="display: none;">
+            <div class="message" id="message"></div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <h4>ℹ️ Important Information</h4>
+            <ul>
+                <li>Minimum withdrawal amount is ₹100</li>
+                <li>Withdrawals are processed instantly via PhonePe</li>
+                <li>Amount will be credited to your registered account</li>
+                <li>You cannot withdraw more than your available balance</li>
+                <li>All transactions are secure and encrypted</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Cabit - Driver Wallet System</p>
+            <p class="footer-note">Powered by PhonePe Payment Gateway</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
