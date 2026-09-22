@@ -1,0 +1,353 @@
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;	
+      }
+      
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #6495ED;
+        padding: 25px;
+      }
+      
+    .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+        min-height:200px;
+    }
+      
+    .title-text {
+        color: WHITE;
+        font-size:40px;
+        font-weight:bold;
+        text-align:center;
+        background: #6495ED;
+        height: 115px;
+    }
+    .title-img{
+        width: 115px;
+        height: 115px;
+        float: left;
+    }
+    .navbar-default {
+        background-color: #6495ED;
+        border-color: #425766;
+        font-weight: bold;
+    }
+    .navbar-default .navbar-brand{
+        color: BLACK;
+    }
+    
+    .navbar-default .navbar-nav{
+        color:BLACK;
+    }
+    
+    .navbar-default .nav-item.active .nav-link,
+    .navbar-default .nav-item:hover .nav-link {
+      color: #ffffff;
+      background-color: #333;
+    }
+    .news {
+      width: 160px
+  }
+    .hor-news-scroll{
+        background: rgba(255, 250, 240, 1);
+    }
+  
+  .news-scroll a {
+      text-decoration: none;
+  }
+  
+  .dot {
+      height: 6px;
+      width: 6px;
+      margin-left: 3px;
+      margin-right: 3px;
+      margin-top: 2px !important;
+      background-color: rgb(207, 23, 23);
+      border-radius: 50%;
+      display: inline-block
+  }
+      .newnews{
+          width: 30px;
+          height: 30px;
+      }
+      
+        .well{
+       background: rgba(255, 250, 240, .2);
+       border: solid blue 1px;
+      }
+      .jumbotron{
+          border:solid blue 2px;
+          background: none;
+      }
+
+
+    /*Quick Link CSS*/
+    .qlink-head{
+      color: white;
+      margin-bottom: 0px;
+      text-align: left;
+      padding-bottom: 0px;
+    }
+
+    .qlink_list{
+      list-style: none;
+      text-align: left;
+      color: black;
+      font-weight: bold;
+      padding-left: 5%;
+    }
+    
+    .qlink_list li{
+      padding-left: 0px;
+    }
+    
+    .qlink_list a{
+        text-decoration:none;
+        color: black;
+    }
+
+    .ulfp {
+      background-color:black;
+      margin-right:90%;
+      float:left;
+      width:20%;
+      height: 3px;
+  }
+  .ulrp {
+      background-color:blue;
+      float:right;
+      width:25%;
+      height:3px;
+      position:absolute;
+      left:20%;
+  }
+  
+
+  .sidenav {    
+    height: auto;    
+    overflow-x: hidden;
+    border:solid blue 2px;
+    border-radius: 5px;
+  }
+  .sidenav a.side-active {
+       color: black;
+      background-color: #D3D3D3;
+  }
+  
+  .sidenav a {    
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: black;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 5px;}
+    .sidenav a {font-size: 18px;}
+  }
+      
+    /*Button Blink Text*/
+    
+    .blink {
+      font-weight: bold;
+      margin-top: 5px;
+      margin-bottom: 5px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-animation: glowing 1500ms infinite;
+        -moz-animation: glowing 1500ms infinite;
+        -o-animation: glowing 1500ms infinite;
+        animation: glowing 1500ms infinite;
+      }
+      @-webkit-keyframes glowing {
+        0% { background-color: #0000B2; -webkit-box-shadow: 0 0 3px #0000B2; }
+        50% { background-color: #0000FF; -webkit-box-shadow: 0 0 40px #0000FF; }
+        100% { background-color: #0000B2; -webkit-box-shadow: 0 0 3px #0000B2; }
+      }
+  
+      @-moz-keyframes glowing {
+        0% { background-color: #0000B2; -moz-box-shadow: 0 0 3px #0000B2; }
+        50% { background-color: #0000FF; -moz-box-shadow: 0 0 40px #0000FF; }
+        100% { background-color: #0000B2; -moz-box-shadow: 0 0 3px #0000B2; }
+      }
+  
+      @-o-keyframes glowing {
+        0% { background-color: #0000B2; box-shadow: 0 0 3px #0000B2; }
+        50% { background-color: #0000FF; box-shadow: 0 0 40px #0000FF; }
+        100% { background-color: #0000B2; box-shadow: 0 0 3px #0000B2; }
+      }
+  
+      @keyframes glowing {
+        0% { background-color: #0000B2; box-shadow: 0 0 3px #0000B2; }
+        50% { background-color: #0000FF; box-shadow: 0 0 40px #0000FF; }
+        100% { background-color: #0000B2; box-shadow: 0 0 3px #0000B2; }
+      }
+      
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    
+    @media (max-width: 1200px){
+        
+      .title-text {
+        color: WHITE;
+        font-size:23px;
+        font-weight:bold;
+        text-align:center;
+        background: #6495ED;
+        height: 75px;
+        }
+        .title-img{
+        width: 75px;
+        height: 75px;
+        float: left;
+        }	  
+        
+        /*Quick Link CSS*/
+        .qlink-head{
+          color: white;
+          font-size: 16px;
+          text-align: left;
+          padding-bottom: 0px;
+        }
+
+        .qlink_list{
+          font-size: 12px;
+          list-style: none;
+          color: black;
+          font-weight: bold;
+          padding-left: 10%;
+        }
+    
+        .qlink_list a{
+            text-decoration:none;
+            color: black;
+        }
+
+        .ulfp {
+          background-color:black;
+          margin-right:90%;
+          float:left;
+          width:20%;
+          height: 3px;
+        }
+        .ulrp {
+            background-color:blue;
+            float:right;
+            width:40%;
+            height:3px;
+            position:absolute;
+            left:20%;
+        }
+    }
+    @media (max-width: 800px){
+        
+      .title-text {
+        color: WHITE;
+        font-size:22px;
+        font-weight:bold;
+        text-align:center;
+        background: #6495ED;
+        height: 75px;
+        }
+        .title-img{
+        width: 75px;
+        height: 75px;
+        float: left;
+        }	  
+        
+        /*Quick Link CSS*/
+        .qlink-head{
+          color: white;
+          font-size: 15px;
+          text-align: left;
+          padding-bottom: 0px;
+        }
+
+        .qlink_list{
+          font-size: 11px;
+          list-style: none;
+          color: black;
+          font-weight: bold;
+          padding-left: 10%;
+        }
+    
+        .qlink_list a{
+            text-decoration:none;
+            color: black;
+        }
+
+        .ulfp {
+          background-color:black;
+          margin-right:90%;
+          float:left;
+          width:20%;
+          height: 3px;
+          }
+        .ulrp {
+            background-color:blue;
+            float:right;
+            width:20%;
+            height:3px;
+            position:absolute;
+            left:20%;
+        }
+    }
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+      .title-text {
+        color: WHITE;
+        font-size:18px;
+        font-weight:bold;
+        text-align:center;
+        background: #6495ED;
+        height: 75px;
+     }
+    .title-img{
+        width: 75px;
+        height: 75px;
+        float: left;
+    }
+    /*Quick Link CSS*/
+    .qlink-head{
+      color: white;
+      font-size: 14px;
+      text-align: left;
+      padding-bottom: 0px;
+    }
+
+    .qlink_list{
+      font-size: 10px;
+      list-style: none;
+      color: black;
+      font-weight: bold;
+      padding-left: 10%;
+    }
+    
+    .qlink_list a{
+        text-decoration:none;
+        color: black;
+    }
+
+    .ulfp {
+      background-color:black;
+      margin-right:90%;
+      float:left;
+      width:20%;
+      height: 3px;
+    }
+    .ulrp {
+        background-color:blue;
+        float:right;
+        width:40%;
+        height:3px;
+        position:absolute;
+        left:20%;
+    }
+    }
