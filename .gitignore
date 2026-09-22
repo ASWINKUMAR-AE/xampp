@@ -1,0 +1,9 @@
+# Ignore large archives and system/temp files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.tmp
+*.log
+mysql/data/*.err
+mysql/data/*.pid
