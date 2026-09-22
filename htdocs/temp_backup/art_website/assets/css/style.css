@@ -1,0 +1,126 @@
+
+.bg-dark-custom {
+    background-color: #080808;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+
+.jumbotron {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+.card {
+    background-color: #2a2a2a;
+    border: 1px solid #444444;
+}
+
+.card-title, .card-text {
+    color: #e0e0e0;
+}
+
+.footer {
+    background-color: #1e1e1e;
+}
+
+.card:hover {
+    background-color: #333333;
+}
+
+.slide_main {
+    background: rgba(57, 56, 56, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+    border: 1px solid rgba(57, 56, 56, 0.3);
+}
+
+.carousel-item, h3 {
+    color: white !important;
+}
+
+button {
+    margin: 10px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.art-logo {
+    width: 100%;
+    max-width: 400px;
+}
+.carousel-indicators > button{
+    border-radius: 50%;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.nav2{
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    border-radius: 50px !important;
+    padding: 0.5rem 1rem;
+    background-image: url(assets/img/bg.jpg);
+    transform-origin: top center;
+}
+
+.navbar-dark.bg-dark-custom {
+    background-color: #222; /* Dark background color */
+}
+
+/* Dynamic Island effect */
+.navbar-toggler-icon {
+    transition: transform 0.3s ease;
+}
+
+.navbar-expand-lg.navbar-animated {
+    animation: island-expand 1s ease-out;
+}
+
+.navbar-collapse.show {
+    animation: island-expand 0.1s ease-out;
+}
+
+@keyframes island-expand {
+    0% {
+        border-radius: 50px;
+        transform: scaleX(0.1);
+      
+    }
+    100% {
+        border-radius: 50px;
+        transform: scaleX(1);
+    }
+}
+
+
+.ani{
+    animation: ani 0.1s ease-out;
+}
+.navbar-toggler {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus, .navbar-toggler:hover {
+    background-color: #333;
+}
+
+/* Change the navbar-toggler-icon when toggled */
+.navbar-collapse.collapsing ~ .navbar-toggler .navbar-toggler-icon {
+    transform: rotate(90deg);
+}
+a:hover{
+    color:#6b46c1 !important;
+}
