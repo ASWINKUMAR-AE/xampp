@@ -1,0 +1,211 @@
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.cart{
+    display: flex;
+    background-color: rgb(43, 42, 42);
+
+    align-items: right;
+    padding: 7px 10px;
+    
+    border-radius: 23px;
+    width: 80px;
+}
+.fa-solid{
+    color: goldenrod;
+}
+.cart p{
+    height: 22px;
+    width: 22px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: goldenrod;
+    color: white;
+}
+.container{
+    display: flex;
+    width: 50%;
+   
+    margin-bottom: 30px;
+}
+#root{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    height:400px;
+    overflow: scroll;
+    margin-right: 10px;
+    
+}
+.sidebar{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.head{
+    background-color: orange;
+    border-radius: 3px;
+    
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+.box{
+    display: flex;
+   
+    flex-wrap: wrap;
+    
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    padding: 15px;
+}
+.img-box{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images{
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+.bottom{
+    
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+h2{
+    font-size: 20px;
+    color: red;
+}
+button{
+    width: 115%;
+    position: relative;
+    border: none;
+   
+    background-color: orange !important; 
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 10px !important;
+
+}
+button:hover{
+    background-color: #333;
+}
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+.row-img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rowimg{
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50%;
+    
+}
+.fa-trash:hover{
+    cursor: pointer;
+    color: #333;
+}
+
+/* CSS for phones */
+@media (max-width: 576px) {
+    .sidebar{
+        width:100px;
+    }
+   
+}
+
+
+@media (max-width: 576px) {
+    .container.col-12 {
+        padding: 0; /* Remove padding for smaller screens */
+    }
+    .sidebar.col-4 {
+        width: 50%; /* Make the sidebar occupy full width */
+        padding: 10px; /* Add some padding for better spacing */
+    }
+    .cart {
+        display: flex;
+        align-items: center;
+    }
+    #cartItem {
+        margin-top: 10px; /* Add some margin top for better spacing */
+    }
+    .head,
+    .foot {
+        text-align: center; /* Center text within .head and .foot */
+    }
+    .row-img{
+        display:none  !important;
+    }
+  
+    #root{
+        display: flex;
+    flex-wrap: wrap;
+    }
+    button{
+        height: 50px;
+        text-align: left;
+        font-size: small !important;
+
+    }
+    #cart{
+        margin-left:-50px !important;
+        background-color: orange !important;
+    }
+    .bottom{
+        
+    }
+    .ad{
+        display: none;
+    }
+}
