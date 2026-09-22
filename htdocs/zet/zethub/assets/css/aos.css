@@ -1,0 +1,6 @@
+/* AOS animation custom styles if needed */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+  
