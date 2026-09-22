@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSearch | Premium Movie Database</title>
+    <meta name="description" content="Search through a vast database of movies by title, genre, and release year.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="main-header">
+            <div class="logo">
+                <h1>AE<span>Search</span></h1>
+            </div>
+            <div class="search-bar-container glass">
+                <input type="text" id="movieSearch" placeholder="Search movies by title..." autocomplete="off">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+        </header>
+
+        <main class="content">
+            <!-- Sidebar / Filters -->
+            <aside class="filters-sidebar glass">
+                <h3>Filters</h3>
+                <div class="filter-group">
+                    <label for="genreFilter">Genre</label>
+                    <select id="genreFilter">
+                        <option value="all">All Genres</option>
+                        <option value="Action">Action</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="yearFilter">Release Year</label>
+                    <select id="yearFilter">
+                        <option value="all">All Years</option>
+                        <option value="2019">2019</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2006">2006</option>
+                        <option value="1999">1999</option>
+                        <option value="1994">1994</option>
+                        <option value="1972">1972</option>
+                    </select>
+                </div>
+                <div class="stats glass-dark">
+                    <p>Showing <span id="movieCount">0</span> movies</p>
+                </div>
+            </aside>
+
+            <!-- Movie Grid -->
+            <section class="movie-grid-container">
+                <div id="movieGrid" class="movie-grid">
+                    <!-- Movies will be injected here via AJAX -->
+                    <div class="loader">Loading movies...</div>
+                </div>
+                <div id="noResults" class="no-results hidden">
+                    <h3>No movies found</h3>
+                    <p>Try adjusting your search or filters.</p>
+                </div>
+            </section>
+        </main>
+
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

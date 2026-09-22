@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies>
+    <movie id="1">
+        <title>Inception</title>
+        <genre>Sci-Fi</genre>
+        <year>2010</year>
+        <director>Christopher Nolan</director>
+        <rating>8.8</rating>
+        <poster>https://images.unsplash.com/photo-1542204112-8736fb052efc?auto=format&fit=crop&q=80&w=400</poster>
+        <description>A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</description>
+    </movie>
+    <movie id="2">
+        <title>The Dark Knight</title>
+        <genre>Action</genre>
+        <year>2008</year>
+        <director>Christopher Nolan</director>
+        <rating>9.0</rating>
+        <poster>https://images.unsplash.com/photo-1531259683007-016a703b223c?auto=format&fit=crop&q=80&w=400</poster>
+        <description>When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.</description>
+    </movie>
+    <movie id="3">
+        <title>Pulp Fiction</title>
+        <genre>Crime</genre>
+        <year>1994</year>
+        <director>Quentin Tarantino</director>
+        <rating>8.9</rating>
+        <poster>https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400</poster>
+        <description>The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.</description>
+    </movie>
+    <movie id="4">
+        <title>Interstellar</title>
+        <genre>Sci-Fi</genre>
+        <year>2014</year>
+        <director>Christopher Nolan</director>
+        <rating>8.7</rating>
+        <poster>https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&q=80&w=400</poster>
+        <description>When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</description>
+    </movie>
+    <movie id="5">
+        <title>The Godfather</title>
+        <genre>Crime</genre>
+        <year>1972</year>
+        <director>Francis Ford Coppola</director>
+        <rating>9.2</rating>
+        <poster>https://images.unsplash.com/photo-1594909122845-11baa439b7bf?auto=format&fit=crop&q=80&w=400</poster>
+        <description>An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.</description>
+    </movie>
+    <movie id="6">
+        <title>The Matrix</title>
+        <genre>Sci-Fi</genre>
+        <year>1999</year>
+        <director>The Wachowskis</director>
+        <rating>8.7</rating>
+        <poster>https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?auto=format&fit=crop&q=80&w=400</poster>
+        <description>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</description>
+    </movie>
+    <movie id="7">
+        <title>Parasite</title>
+        <genre>Drama</genre>
+        <year>2019</year>
+        <director>Bong Joon-ho</director>
+        <rating>8.5</rating>
+        <poster>https://images.unsplash.com/photo-1594908122393-206bc16f272a?auto=format&fit=crop&q=80&w=400</poster>
+        <description>Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.</description>
+    </movie>
+    <movie id="8">
+        <title>Avatar</title>
+        <genre>Sci-Fi</genre>
+        <year>2009</year>
+        <director>James Cameron</director>
+        <rating>7.9</rating>
+        <poster>https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=400</poster>
+        <description>A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</description>
+    </movie>
+    <movie id="9">
+        <title>The Shawshank Redemption</title>
+        <genre>Drama</genre>
+        <year>1994</year>
+        <director>Frank Darabont</director>
+        <rating>9.3</rating>
+        <poster>https://images.unsplash.com/photo-1440404653325-ab12d7c48f43?auto=format&fit=crop&q=80&w=400</poster>
+        <description>Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.</description>
+    </movie>
+    <movie id="10">
+        <title>The Prestige</title>
+        <genre>Drama</genre>
+        <year>2006</year>
+        <director>Christopher Nolan</director>
+        <rating>8.5</rating>
+        <poster>https://images.unsplash.com/photo-1517604931442-7e0c8ed09c9c?auto=format&fit=crop&q=80&w=400</poster>
+        <description>After a tragic accident, two stage magicians in 1890s London engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.</description>
+    </movie>
+    <movie id="11">
+        <title>John Wick</title>
+        <genre>Action</genre>
+        <year>2014</year>
+        <director>Chad Stahelski</director>
+        <rating>7.4</rating>
+        <poster>https://images.unsplash.com/photo-1596727147705-61a532a659bd?auto=format&fit=crop&q=80&w=400</poster>
+        <description>An ex-hitman comes out of retirement to track down the gangsters that killed his dog and took his car.</description>
+    </movie>
+    <movie id="12">
+        <title>Mad Max: Fury Road</title>
+        <genre>Action</genre>
+        <year>2015</year>
+        <director>George Miller</director>
+        <rating>8.1</rating>
+        <poster>https://images.unsplash.com/photo-1509281373149-e957c6296406?auto=format&fit=crop&q=80&w=400</poster>
+        <description>In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the help of a group of female prisoners, a psychotic worshiper, and a drifter named Max.</description>
+    </movie>
+</movies>
